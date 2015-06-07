@@ -15,7 +15,7 @@ it('get-function-name', function() {
   ase(getName(new Function('a', 'b', 'return')), 'anonymous')
 
   function Klass() {}
-  klass = new Klass()
+  var klass = new Klass()
   ase(getName(klass.constructor), 'Klass')
  
   ase(getName(true), null)
