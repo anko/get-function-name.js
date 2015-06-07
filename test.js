@@ -1,7 +1,6 @@
 'use strict';
 
-var type = require('./index')
-  , assert = require('assert')
+var assert = require('assert')
   , ase = assert.strictEqual
  
 it('get-function-name', function() {
