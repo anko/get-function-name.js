@@ -22,4 +22,5 @@
     "describe": false
   , "it": false
   }
+, "evil": true
 }
