@@ -1,6 +1,9 @@
 {
   "name": "get-function-name",
   "author": "Beau Sorensen <mail@beausorensen.com> (http://github.com/sorensen)",
+  "contributors": [
+      "An <an@cyan.io>"
+  ],
   "version": "0.0.1",
   "license": "MIT",
   "keywords": [
