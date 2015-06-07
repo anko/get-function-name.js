@@ -2,6 +2,7 @@
 
 var assert = require('assert')
   , ase = assert.strictEqual
+  , asthrows = assert.throws
  
 it('get-function-name', function() {
   var getName = require('./index')
@@ -9,19 +10,18 @@ it('get-function-name', function() {
   ase(getName(function foo() {}), 'foo')
   ase(getName(function foo(){}), 'foo')
   ase(getName(function foo  (){}), 'foo')
-  
-  ase(getName(function () {}), 'anonymous')
-  ase(getName(new Function('a', 'b', 'return')), 'anonymous')
+
+  ase(getName(function () {}), null)
+  ase(getName(new Function('a', 'b', 'return')), "anonymous")
 
   function Klass() {}
   var klass = new Klass()
   ase(getName(klass.constructor), 'Klass')
- 
-  ase(getName(true), null)
-  ase(getName(), null)
-  ase(getName(''), null)
-  ase(getName([1, 2]), null)
-  ase(getName({a: 3}), null)
+
+  ;[ true, undefined, null, "", [1,2], {a:3} ]
+    .forEach(function(x) {
+      asthrows(function() { return getName(x); })
+    })
 
   ase(getName(String), 'String')
   ase(getName(Number), 'Number')

@@ -23,7 +23,7 @@ var getFunctionName = require('get-function-name')
 var foo = function() {}
 function bar() {}
 
-getFunctionName(foo) // 'anonymous'
+getFunctionName(foo) // null
 getFunctionName(bar) // 'bar'
-getFunctionName('hello') // null
+getFunctionName('hello') // throws error
 ```
