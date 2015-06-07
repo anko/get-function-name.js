@@ -1,25 +1,27 @@
 {
-  "name": "get-function-name"
-, "author": "Beau Sorensen <mail@beausorensen.com> (http://github.com/sorensen)"
-, "version": "0.0.1"
-, "license": "MIT"
-, "keywords": [
-    "function", "name"
-  ]
-, "description": "Get name of a function"
-, "repository": {
-    "type": "git"
-  , "url": "git://github.com/sorensen/get-function-name.js.git"
-  }
-, "engines": {
+  "name": "get-function-name",
+  "author": "Beau Sorensen <mail@beausorensen.com> (http://github.com/sorensen)",
+  "version": "0.0.1",
+  "license": "MIT",
+  "keywords": [
+    "function",
+    "name"
+  ],
+  "description": "Get name of a function",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sorensen/get-function-name.js.git"
+  },
+  "engines": {
     "node": "0.x"
-  }
-, "main": "index.js"
-, "scripts": {
-    "test": "npm run hint && ./node_modules/mocha/bin/mocha -R spec test.js"
-  , "hint": "jshint *.js *.json"
-  }
-, "devDependencies": {
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run hint && ./node_modules/mocha/bin/mocha -R spec test.js",
+    "hint": "jshint *.js *.json"
+  },
+  "devDependencies": {
+    "jshint": "^2.8.0",
     "mocha": "^2.1.0"
   }
 }
